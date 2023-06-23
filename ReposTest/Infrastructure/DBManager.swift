@@ -39,7 +39,7 @@ final class DBManager {
         })
     }
     
-    private func getUsers() -> [User] {
+    func getUsers() -> [User] {
         do {
             return try db?.prepare(User.userTable).map { row in
                 return User(id: row[User.id], login: row[User.login], avatarUrl: row[User.avatarUrl], reposUrl: row[User.repos_url])
@@ -59,13 +59,15 @@ final class DBManager {
         }
     }
     
-    private func getRepos() -> [Repo] {
+    func getRepos(for user: String) -> [Repo] {
         do {
-            return try db?.prepare(Repo.repoTable).map { row in
+            return try db?.prepare(Repo.repoTable).compactMap { row in
                 let userData = row[Repo.owner]
                 let owner = try JSONDecoder().decode(User.self, from: userData)
-                
-                return Repo(id: row[Repo.id], full_name: row[Repo.name], htmlUrl: "", description: row[Repo.description], owner: owner)
+                if owner.login == user {
+                    return Repo(id: row[Repo.id], full_name: row[Repo.name], htmlUrl: "", description: row[Repo.description], owner: owner)
+                }
+                return nil
             } ?? []
         } catch {
             print("Failed to fetch repos from database: \(error.localizedDescription)")

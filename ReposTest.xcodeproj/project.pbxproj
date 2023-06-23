@@ -21,6 +21,7 @@
 		8EF59E412A44AF4900DD24A9 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 8EF59E402A44AF4900DD24A9 /* SQLite */; };
 		8EF59E442A44B06F00DD24A9 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF59E432A44B06F00DD24A9 /* DBManager.swift */; };
 		8EF59E482A45099D00DD24A9 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF59E472A45099D00DD24A9 /* AvatarView.swift */; };
+		8EF59E4A2A45247B00DD24A9 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF59E492A45247B00DD24A9 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		8E0581D22A42909B006D1FDB /* ReposView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposView.swift; sourceTree = "<group>"; };
 		8EF59E432A44B06F00DD24A9 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
 		8EF59E472A45099D00DD24A9 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
+		8EF59E492A45247B00DD24A9 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				8E0581C92A428FE7006D1FDB /* APIService.swift */,
 				8EF59E432A44B06F00DD24A9 /* DBManager.swift */,
+				8EF59E492A45247B00DD24A9 /* NetworkManager.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -233,6 +236,7 @@
 				8E0581C62A428F73006D1FDB /* RepoModel.swift in Sources */,
 				8E0581CF2A42906E006D1FDB /* RepoViewModel.swift in Sources */,
 				8EF59E482A45099D00DD24A9 /* AvatarView.swift in Sources */,
+				8EF59E4A2A45247B00DD24A9 /* NetworkManager.swift in Sources */,
 				8E0581C42A428F64006D1FDB /* UserModel.swift in Sources */,
 				8EF59E442A44B06F00DD24A9 /* DBManager.swift in Sources */,
 				8E0581CA2A428FE7006D1FDB /* APIService.swift in Sources */,

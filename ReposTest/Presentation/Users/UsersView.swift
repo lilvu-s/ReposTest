@@ -23,7 +23,7 @@ struct UsersView: View {
                 } else {
                     List {
                         ForEach(viewModel.users) { user in
-                            NavigationLink(destination: ReposView(login: user.login)) {
+                            NavigationLink(destination: ReposView(user: user.login)) {
                                 HStack(spacing: 15) {
                                     AvatarView(user: user)
                                     

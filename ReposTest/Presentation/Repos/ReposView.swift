@@ -10,7 +10,7 @@ import Network
 
 struct ReposView: View {
     @StateObject private var viewModel = RepoViewModel()
-    let login: String
+    let user: String
     
     var body: some View {
         VStack {
@@ -32,14 +32,15 @@ struct ReposView: View {
                         }
                         .padding(.vertical, 20)
                     }
-                    Button("Load More", action: { viewModel.fetchRepos(for: login) })
+                    Button("Load More", action: { viewModel.fetchRepos(for: user) })
                         .foregroundColor(.black)
                 }
             }
         }
         .navigationTitle("Repositories")
         .onAppear {
-            viewModel.fetchRepos(for: login)
+            viewModel.user = user
+            viewModel.fetchRepos(for: user)
         }
     }
 }

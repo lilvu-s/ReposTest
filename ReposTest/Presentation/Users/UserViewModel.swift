@@ -12,7 +12,13 @@ final class UserViewModel: ObservableObject {
     private var currentPage = 1
     
     init() {
-        fetchUsers()
+        NetworkManager.shared.onConnectionChange = { [weak self] isConnected in
+            if isConnected {
+                self?.fetchUsers()
+            } else {
+                self?.loadUsersFromLocal()
+            }
+        }
     }
     
     func fetchUsers() {
@@ -32,5 +38,10 @@ final class UserViewModel: ObservableObject {
                 }
             }
         }
+    }
+    
+    func loadUsersFromLocal() {
+        let savedUsers = DBManager.shared.getUsers()
+        self.users.append(contentsOf: savedUsers)
     }
 }
