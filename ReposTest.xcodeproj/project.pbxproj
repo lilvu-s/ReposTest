@@ -14,10 +14,13 @@
 		8E0581C42A428F64006D1FDB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581C32A428F64006D1FDB /* UserModel.swift */; };
 		8E0581C62A428F73006D1FDB /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581C52A428F73006D1FDB /* RepoModel.swift */; };
 		8E0581C82A428F92006D1FDB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581C72A428F92006D1FDB /* UserViewModel.swift */; };
-		8E0581CA2A428FE7006D1FDB /* NetworkingService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581C92A428FE7006D1FDB /* NetworkingService.swift */; };
+		8E0581CA2A428FE7006D1FDB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581C92A428FE7006D1FDB /* APIService.swift */; };
 		8E0581CD2A42902E006D1FDB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8E0581CC2A42902E006D1FDB /* Alamofire */; };
 		8E0581CF2A42906E006D1FDB /* RepoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581CE2A42906E006D1FDB /* RepoViewModel.swift */; };
 		8E0581D32A42909B006D1FDB /* ReposView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581D22A42909B006D1FDB /* ReposView.swift */; };
+		8EF59E412A44AF4900DD24A9 /* SQLite in Frameworks */ = {isa = PBXBuildFile; productRef = 8EF59E402A44AF4900DD24A9 /* SQLite */; };
+		8EF59E442A44B06F00DD24A9 /* DBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF59E432A44B06F00DD24A9 /* DBManager.swift */; };
+		8EF59E482A45099D00DD24A9 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EF59E472A45099D00DD24A9 /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,9 +32,11 @@
 		8E0581C32A428F64006D1FDB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8E0581C52A428F73006D1FDB /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
 		8E0581C72A428F92006D1FDB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
-		8E0581C92A428FE7006D1FDB /* NetworkingService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingService.swift; sourceTree = "<group>"; };
+		8E0581C92A428FE7006D1FDB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		8E0581CE2A42906E006D1FDB /* RepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
 		8E0581D22A42909B006D1FDB /* ReposView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposView.swift; sourceTree = "<group>"; };
+		8EF59E432A44B06F00DD24A9 /* DBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DBManager.swift; sourceTree = "<group>"; };
+		8EF59E472A45099D00DD24A9 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EF59E412A44AF4900DD24A9 /* SQLite in Frameworks */,
 				8E0581CD2A42902E006D1FDB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,7 +101,8 @@
 		8E0581C02A428C70006D1FDB /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
-				8E0581C92A428FE7006D1FDB /* NetworkingService.swift */,
+				8E0581C92A428FE7006D1FDB /* APIService.swift */,
+				8EF59E432A44B06F00DD24A9 /* DBManager.swift */,
 			);
 			path = Infrastructure;
 			sourceTree = "<group>";
@@ -111,8 +118,7 @@
 		8E0581C22A428CD6006D1FDB /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8E0581C32A428F64006D1FDB /* UserModel.swift */,
-				8E0581C52A428F73006D1FDB /* RepoModel.swift */,
+				8EF59E422A44AFD200DD24A9 /* Models */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -121,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				8E0581B32A428C25006D1FDB /* UsersView.swift */,
+				8EF59E472A45099D00DD24A9 /* AvatarView.swift */,
 				8E0581C72A428F92006D1FDB /* UserViewModel.swift */,
 			);
 			path = Users;
@@ -133,6 +140,15 @@
 				8E0581CE2A42906E006D1FDB /* RepoViewModel.swift */,
 			);
 			path = Repos;
+			sourceTree = "<group>";
+		};
+		8EF59E422A44AFD200DD24A9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E0581C52A428F73006D1FDB /* RepoModel.swift */,
+				8E0581C32A428F64006D1FDB /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,6 +169,7 @@
 			name = ReposTest;
 			packageProductDependencies = (
 				8E0581CC2A42902E006D1FDB /* Alamofire */,
+				8EF59E402A44AF4900DD24A9 /* SQLite */,
 			);
 			productName = ReposTest;
 			productReference = 8E0581AE2A428C25006D1FDB /* ReposTest.app */;
@@ -184,6 +201,7 @@
 			mainGroup = 8E0581A52A428C25006D1FDB;
 			packageReferences = (
 				8E0581CB2A42902E006D1FDB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				8EF59E3F2A44AF4900DD24A9 /* XCRemoteSwiftPackageReference "SQLite.swift" */,
 			);
 			productRefGroup = 8E0581AF2A428C25006D1FDB /* Products */;
 			projectDirPath = "";
@@ -214,8 +232,10 @@
 				8E0581B42A428C25006D1FDB /* UsersView.swift in Sources */,
 				8E0581C62A428F73006D1FDB /* RepoModel.swift in Sources */,
 				8E0581CF2A42906E006D1FDB /* RepoViewModel.swift in Sources */,
+				8EF59E482A45099D00DD24A9 /* AvatarView.swift in Sources */,
 				8E0581C42A428F64006D1FDB /* UserModel.swift in Sources */,
-				8E0581CA2A428FE7006D1FDB /* NetworkingService.swift in Sources */,
+				8EF59E442A44B06F00DD24A9 /* DBManager.swift in Sources */,
+				8E0581CA2A428FE7006D1FDB /* APIService.swift in Sources */,
 				8E0581C82A428F92006D1FDB /* UserViewModel.swift in Sources */,
 				8E0581D32A42909B006D1FDB /* ReposView.swift in Sources */,
 				8E0581B22A428C25006D1FDB /* ReposTestApp.swift in Sources */,
@@ -435,6 +455,14 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		8EF59E3F2A44AF4900DD24A9 /* XCRemoteSwiftPackageReference "SQLite.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/stephencelis/SQLite.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.2;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -442,6 +470,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 8E0581CB2A42902E006D1FDB /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		8EF59E402A44AF4900DD24A9 /* SQLite */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8EF59E3F2A44AF4900DD24A9 /* XCRemoteSwiftPackageReference "SQLite.swift" */;
+			productName = SQLite;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
