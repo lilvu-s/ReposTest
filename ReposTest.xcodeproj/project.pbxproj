@@ -11,8 +11,8 @@
 		8E0581B42A428C25006D1FDB /* UsersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581B32A428C25006D1FDB /* UsersView.swift */; };
 		8E0581B62A428C2A006D1FDB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0581B52A428C2A006D1FDB /* Assets.xcassets */; };
 		8E0581B92A428C2A006D1FDB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E0581B82A428C2A006D1FDB /* Preview Assets.xcassets */; };
-		8E0581C42A428F64006D1FDB /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581C32A428F64006D1FDB /* UserModel.swift */; };
-		8E0581C62A428F73006D1FDB /* RepoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581C52A428F73006D1FDB /* RepoModel.swift */; };
+		8E0581C42A428F64006D1FDB /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581C32A428F64006D1FDB /* User.swift */; };
+		8E0581C62A428F73006D1FDB /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581C52A428F73006D1FDB /* Repo.swift */; };
 		8E0581C82A428F92006D1FDB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581C72A428F92006D1FDB /* UserViewModel.swift */; };
 		8E0581CA2A428FE7006D1FDB /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E0581C92A428FE7006D1FDB /* APIService.swift */; };
 		8E0581CD2A42902E006D1FDB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 8E0581CC2A42902E006D1FDB /* Alamofire */; };
@@ -30,8 +30,8 @@
 		8E0581B32A428C25006D1FDB /* UsersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersView.swift; sourceTree = "<group>"; };
 		8E0581B52A428C2A006D1FDB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8E0581B82A428C2A006D1FDB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		8E0581C32A428F64006D1FDB /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		8E0581C52A428F73006D1FDB /* RepoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoModel.swift; sourceTree = "<group>"; };
+		8E0581C32A428F64006D1FDB /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		8E0581C52A428F73006D1FDB /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		8E0581C72A428F92006D1FDB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		8E0581C92A428FE7006D1FDB /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		8E0581CE2A42906E006D1FDB /* RepoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoViewModel.swift; sourceTree = "<group>"; };
@@ -121,7 +121,8 @@
 		8E0581C22A428CD6006D1FDB /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				8EF59E422A44AFD200DD24A9 /* Models */,
+				8E0581C52A428F73006D1FDB /* Repo.swift */,
+				8E0581C32A428F64006D1FDB /* User.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -143,15 +144,6 @@
 				8E0581CE2A42906E006D1FDB /* RepoViewModel.swift */,
 			);
 			path = Repos;
-			sourceTree = "<group>";
-		};
-		8EF59E422A44AFD200DD24A9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				8E0581C52A428F73006D1FDB /* RepoModel.swift */,
-				8E0581C32A428F64006D1FDB /* UserModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,11 +225,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E0581B42A428C25006D1FDB /* UsersView.swift in Sources */,
-				8E0581C62A428F73006D1FDB /* RepoModel.swift in Sources */,
+				8E0581C62A428F73006D1FDB /* Repo.swift in Sources */,
 				8E0581CF2A42906E006D1FDB /* RepoViewModel.swift in Sources */,
 				8EF59E482A45099D00DD24A9 /* AvatarView.swift in Sources */,
 				8EF59E4A2A45247B00DD24A9 /* NetworkManager.swift in Sources */,
-				8E0581C42A428F64006D1FDB /* UserModel.swift in Sources */,
+				8E0581C42A428F64006D1FDB /* User.swift in Sources */,
 				8EF59E442A44B06F00DD24A9 /* DBManager.swift in Sources */,
 				8E0581CA2A428FE7006D1FDB /* APIService.swift in Sources */,
 				8E0581C82A428F92006D1FDB /* UserViewModel.swift in Sources */,
